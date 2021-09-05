@@ -9,5 +9,17 @@ If you would like to connect to the API yourself, please refer to the documentat
 ### File Description
 To save you some time, I made the connection to the City of Edmonton's API and stored over 3 million rows of data in parquet folder. So in order to do exploratory data analysis on this dataset, you just need to establish the Spark connection and read from the parquet folder located in output/houses.parquet.
 ### Summary of Results
+<ol>
+    <li>
 Between 2012 and 2020, in addition to the cashflow from rental income, return on investment from property appreciation on multi-family and single-family properties are 58.60% and 5.46% respectively. In particular, if you bought an apartment building in 2012 for 1 million dollar, in 2020, your building would have appreciated to 1 million and a half dollar.
 ![plot](./bar_plot_ROI_by_property_type.png)
+    </li>
+       <li>
+Although Multi Family real estate investment provides significantly higher ROI, it is much riskier than Single Family. While Single Family properties did not seem to fluctuate much from 2012 to 2020, Multi Family properties experienced a sharp decline between 2016 and 2017, but finally recovered and provided a substantial increase in 2020. Therefore, your risk tolerance would be a big factor in deciding whether to invest in single family or multi family properties.
+![plot](./line_chart_by_property_type.png)
+    </li>
+        <li>
+The Root Mean Squared Error of the trained model using the following features: property_type (Single family vs Multi family), lot_size, garage (Y/N), street_name, year_built, zoning, and type to determine assessed_value is 3,949,000 which is unacceptable. Although the model does not provide a great root mean squared error, it indicates that features such as zone, year_built, lot_size, and property_type (multi family vs single family) do significantly impact the value of a property. 
+![plot](./feature_importance.png)
+    </li>
+</ol>
