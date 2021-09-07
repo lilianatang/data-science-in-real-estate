@@ -4,4 +4,3 @@ pyspark
 matplotlib
 numpy
 seaborn
-csv
