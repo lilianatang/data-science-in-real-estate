@@ -1,5 +1,5 @@
 pandas
-cassandra
+cassandra-driver
 pyspark
 matplotlib
 numpy
