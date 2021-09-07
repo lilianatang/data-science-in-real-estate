@@ -1,0 +1,7 @@
+pandas
+cassandra
+pyspark
+matplotlib
+numpy
+seaborn
+csv
